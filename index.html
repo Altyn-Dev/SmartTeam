@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartTeam — Планировщик задач</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">SmartTeam</div>
+
+            <div class="student-info">
+                <span>Студент</span>
+            </div>
+        </header>
+
+
+        <!-- Основной блок -->
+        <section class="welcome">
+            <p class="subtitle">Мой учебный план</p>
+
+            <h1>
+                Планировщик<br>
+                задач студента
+            </h1>
+
+            <p class="description">
+                Планируй учебные задачи, следи за сроками
+                и контролируй свой прогресс.
+            </p>
+        </section>
+
+
+        <!-- Добавление задачи -->
+        <section class="task-form">
+
+            <h2>Добавить задачу</h2>
+
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Например: подготовить презентацию"
+                >
+
+                <input
+                    type="date"
+                    id="date-input"
+                >
+
+                <select id="priority-input">
+                    <option value="low">Низкий приоритет</option>
+                    <option value="medium" selected>
+                        Средний приоритет
+                    </option>
+                    <option value="high">Высокий приоритет</option>
+                </select>
+
+                <button id="add-task-btn">
+                    + Добавить задачу
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Задачи -->
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+
+                <div>
+                    <h2>Мои задачи</h2>
+
+                    <p id="task-count">
+                        Всего задач: 0
+                    </p>
+                </div>
+
+
+                <!-- Фильтр -->
+                <div class="filters">
+
+                    <button
+                        class="filter-btn active"
+                        data-filter="all">
+                        Все
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="active">
+                        Активные
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="completed">
+                        Выполненные
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Список задач -->
+            <div id="task-list" class="task-list">
+
+                <!-- Задачи будут добавляться через JavaScript -->
+
+                <div id="empty-message" class="empty-message">
+
+                    <div class="empty-icon">✓</div>
+
+                    <h3>Задач пока нет</h3>
+
+                    <p>
+                        Добавь первую учебную задачу,
+                        чтобы начать планирование.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Статистика -->
+        <section class="statistics">
+
+            <div class="stat-card">
+                <span id="total-tasks">0</span>
+                <p>Всего задач</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="active-tasks">0</span>
+                <p>Активных</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="completed-tasks">0</span>
+                <p>Выполнено</p>
+            </div>
+
+        </section>
+
+
+        <!-- Подвал -->
+        <footer>
+            <p>SmartTeam © 2026</p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
